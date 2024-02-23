@@ -55,7 +55,7 @@ Ushbu sinf bizga ma'lumotlar bazasi bilan ishlashda kerakli method va obektlarda
 6. SqlDataAdapter: Ma'lumotlar bazasidan ma'lumotlar olish va ularni saqlash uchun ishlatiladi. Ushbu obyekt orqali ma'lumotlar bazasidan ma'lumotlarni olish, ularga o'zgartirishlar qilish va yangi ma'lumotlarni qo'shish imkoniyatiga egasiz.
 
 ##Coding qismi
-Mana ADO.NET haqida qisqacha ma'lumotga ega bo'ldingiz. Endi quyida sizga kod misolida tushuntirishga harakat qilaman. Siz bilan quyidagi kodda Talaba nomli obektni database bilan bog'lashni o'rganamiz. Uni Console Application holatda tuzamiz.
+Mana ADO.NET haqida qisqacha ma'lumotga ega bo'ldingiz. Endi quyida sizga kod misolida tushuntirishga harakat qilaman. Siz bilan quyidagi kodda Talaba nomli obektni database bilan bog'lashni o'rganamiz. Uni Console Application holatda tuzamiz. Kodni o'qib chiqing. Sabab: Izoh holatida kod sharxlangan va kod tugaganda ham alohida ma'lumotlar beriladi.
 
 ***Ishni Talaba modeli tuzishdan boshlaymiz.***
 ```
