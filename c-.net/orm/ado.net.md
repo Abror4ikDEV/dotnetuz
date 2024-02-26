@@ -158,10 +158,11 @@ namespace ADO.NET
     }
 }
 ```
-##ExcecuteReader va ExcecuteNonQuery farqi##
+
+**ExcecuteReader va ExcecuteNonQuery farqi**
 Istalgan dassturlash tilida(ORMda ham) biz CRUD amallar bajarishda databasega Create Update Delete buyruqlarini yuborsak undan javob qaytmaydi. Yani natija none bo'ladi. None natijalar uchun esa biz ExcecuteNonQuery Methodidan foydalanamiz va uni biror o'zgaruvchiga saqlamaymiz. Lekin bizda ikkinchi qism ya'ni Read buyruq qolib ketdi. Biz databasedan istalgan malumotni olish uchun so'rov yuborsak va biz qandaydir natijani kutishimiz kerak bo'lsa ExcecuteReader Methodidan foydalanamiz va uni SqlDataReader Tipidagi o'zgaruvchiga saqlaymiz. Yuqoridagi kod bilan qayta tanishib chiqing va tushunishga harakat qiling.
 
-##Nima uchun finally qismda Close qilamiz##
+**Nima uchun finally qismda Close qilamiz**
 Biz dastur yozishda istisno holatlarni hisobla olish uchun try va catch operatoridan foydalandik. Aytaylik Connection ochish muvaffaqiyatli bajarildi ammo Command qismda hatolik bo'lsachi? Shu qismda dastur to'xtaydi ammo Command qismning pastida oqimni uzuvchi buyruq qolib ketadi. Demak biz uni tryda ham catchda ham yozishimiz kerak. Endi savol try tugasa ham catch tugasa ham bir hil ish bajarishimiz kerak ekan buni ikkalasiga yozishimiz shartmi? Albatta yo'q buni ikkalasiga tegishli bo'lgan finally yani istisno operatori tugassh qismiga yozamiz... 
 
 
