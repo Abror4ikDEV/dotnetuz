@@ -6,7 +6,7 @@ description: Abror Qurbonov
 ADO.NET - C# tilida Ma'lumotlar bazasi bilan bog'lanish uchun foydalanish mumkin bo'lgan framework(ORM emas). Ya'ni SQL Server, SQLite, MySQL, OracleDB va boshqa ma'lumotllar bazasiga ma'lumot qo'shish o'chirish va turli hil SQL so'rovlarni yuborish uchun ishlaydi. ADO.NET ORM emas. U framework hisoblanadi. ORM esa ADO.NET ustiga qurilgan.
 
 ADO.NET - .NET Framework versiyasidan qo'shilgan. ADO.NETning asosiy methodlari hozirda ***Microsoft.Data*** nomli package ichida yozilgan.
-##Foydalanish bo'yicha yo'riqnoma
+**Foydalanish bo'yicha yo'riqnoma**
 Demak ADO.NET bilan ishlashda Microsoft.Data sinfidan foydalanishimiz kerakligini bildik. Endi savol tug'ulishi mumkin. ***"Hamma Database uchun shu sinf ishlatiladimi...?"*** Javob esa: ***"Albatta yo'q!"***
 Masalan men loyihamda SQLite Database tizimidan foydalanishni istayman. Lekin uni qanday using qilaman...? Masalan men SQLite Database tizimi uchun quyidagi kodni kodimizga qo'shishimiz kerak.
 ```C#
@@ -15,7 +15,7 @@ using Microsoft.Data.Sqlite
 Ushbu sinf bizga ma'lumotlar bazasi bilan ishlashda kerakli method va obektlardan foydalanishga yordam beradi. Yani usingdan so'ng Microsoft.Data. + (Database nomi) holatida yozamiz.
 
 
-##Quyida ADO.NET uchun asosiy qismlari bilan tanishishingiz mumkin!
+**Quyida ADO.NET uchun asosiy qismlari bilan tanishishingiz mumkin!**
 1. SqlConnection - Ma'lumotlar bazasiga (Databasega) ulanish uchun ishlatiladi. ADO.NETning bu qismidan Databasega ulanishni ochish va yopish uchun foydalanamiz.
 	```c#
 	SqlConnection connection = new SqlConnection(connectionString);
