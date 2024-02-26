@@ -3,12 +3,12 @@ description: Abror Qurbonov
 ---
 # ADO.NET
 
-ADO.NET - C# tilida Database bilan bog'lanish uchun foydalanish mumkin bo'lgan framework. Ya'ni SQL Server, SQLite, MySQL, OracleDB va boshqa ma'lumotlar bazalariga bog'liq ma'lumotlar bilan ishlash uchun yordamchi funksiyalar va obyektlar qo'shish bilan ishlaydi. ORM ADO.NET ustiga qurilgan.
+ADO.NET - C# tilida Ma'lumotlar bazasi bilan bog'lanish uchun foydalanish mumkin bo'lgan framework(ORM emas). Ya'ni SQL Server, SQLite, MySQL, OracleDB va boshqa ma'lumotllar bazasiga ma'lumot qo'shish o'chirish va turli hil SQL so'rovlarni yuborish uchun ishlaydi. ADO.NET ORM emas. U framework hisoblanadi. ORM esa ADO.NET ustiga qurilgan.
 
-ADO.NET - .Net Framework versiyasidan qo'shilgan va ADO.NETning asosiy methodlari hozirda ***Microsoft.Data*** nomli package ichidan yozilgan.
+ADO.NET - .NET Framework versiyasidan qo'shilgan. ADO.NETning asosiy methodlari hozirda ***Microsoft.Data*** nomli package ichida yozilgan.
 ##Foydalanish bo'yicha yo'riqnoma
-Demak ADO.NET bilan ishlashda Microsoft.Data sinfidan foydalanishimiz kerakligini bildik. Endi savol tug'ulishi mumkin. Hamma Database uchun shu sinf ishlatiladimi...? Albatta yo'q!
-Masalan men loyihamda SQLite Database tizimidan foydalanishni istayman. Lekin uni qanday using qilaman...? Endi biz Package ichidagi namespacelarga murojaat qilamiz. Masalan SQLite uchun quyidagi kodni kodimizga qo'shishimiz kerak.
+Demak ADO.NET bilan ishlashda Microsoft.Data sinfidan foydalanishimiz kerakligini bildik. Endi savol tug'ulishi mumkin. ***"Hamma Database uchun shu sinf ishlatiladimi...?"*** Javob esa: ***"Albatta yo'q!"***
+Masalan men loyihamda SQLite Database tizimidan foydalanishni istayman. Lekin uni qanday using qilaman...? Masalan men SQLite Database tizimi uchun quyidagi kodni kodimizga qo'shishimiz kerak.
 ```C#
 using Microsoft.Data.Sqlite
 ```
@@ -23,9 +23,9 @@ Ushbu sinf bizga ma'lumotlar bazasi bilan ishlashda kerakli method va obektlarda
 	//Your code
 	connection.Close();
 	```
-2. SqlCommand - SQL so'rovlarini databasega yuborish uchun ishlatiladi. Ushbu obekt orqali orqali Sql so'rovlarni bajarish, saqlash yoki ma'lumot olib kelish uchun foydalanishingiz mumkin.
+2. SqlCommand - SQL so'rovlarini databasega yuborish uchun ishlatiladi. Ushbu obekt orqali orqali Sql so'rovlarni bajarish, ma'lumot saqlash yoki ma'lumot olib kelish uchun foydalanishingiz mumkin.
 	Uning hususiy buyruqlari quyidagilar
-	1. ExecuteNonQuery - Ma'lumotlarni o'zgartirmaydigan (masalan, INSERT, UPDATE, DELETE) SQL so'rovlarini bajarish uchun ishlatiladi.
+	1. ExecuteNonQuery - Ma'lumotlarni hech qanday natija kutilmaydigan (masalan, INSERT, UPDATE, DELETE) SQL so'rovlarini bajarish uchun ishlatiladi.
 	```
 	connection.Open();
 	SqlCommand command = new SqlCommand("INSERT INTO MyTable (Column1, Column2) VALUES (@Value1, @Value2)", connection);
@@ -41,7 +41,7 @@ Ushbu sinf bizga ma'lumotlar bazasi bilan ishlashda kerakli method va obektlarda
     }
 	```
 	3. ExecuteXmlReader: XML shaklida ma'lumotlarni olish uchun ishlatiladi. Bu, ExecuteReader metodining o'zgartirilgan versiyasidir va XML shaklida ma'lumotlar qaytaradi.
-	4. ExecuteScalar: So'rov natijasida faqatgina bir maydon qiymatini qaytaradi. Masalan, SELECT COUNT(*) FROM MyTable so'rovi ExecuteScalar yordamida bajarganda, natija raqamning int ko'rinishida qaytariladi.
+	4. ExecuteScalar: So'rov natijasida faqatgina bir maydon qiymatini qaytaradi. Masalan, ```SELECT COUNT(*) FROM MyTable``` so'rovi ExecuteScalar yordamida bajarganda, natija raqamning int ko'rinishida qaytariladi.
 	```
 	SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM MyTable", connection);
 	int count = (int)command.ExecuteScalar();
